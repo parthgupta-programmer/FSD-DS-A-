@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DataType</title>
 </head>
 <body>
+    <!-- const -->
+
     <!-- <script>
         const a=65;
         const a=10;
@@ -13,14 +15,46 @@
     </script>
      -->
 
-     <script>
+    <!-- var -->
+
+     <!-- <script>
         var a='Hello,I am Parth Gupta!!';
         var a=10;
         var a=5;
         alert('Message: ' + a);
+     </script> -->
+
+     <!-- let -->
+
+     <script>
+        let a=90;
+        let b=5;
+        let c=a+b;
+
+        alert(a+'+'+b+'='+c);
+        alert(a+'x'+b+'='+a*b);
      </script>
+
 </body>
 </html>
 
-<!-- Whenever we declare a variable using const a more than 2 times, then there the error occurs:Uncaught SyntaxError: Identifier 'a' has already been declared. -->
-<!-- Whenever we declare a variable using var a more than 2 times, then there is no error ,but the value is printed which is the last value assigned to it.-->
+
+<!-- const: A variable cannot be redeclared or reassigned using const. -->
+
+<!-- var: A variable can be redeclared and reassigned; the latest value is used. -->
+
+<!-- let: A variable cannot be redeclared in the same scope, but its value can be reassigned. -->
+
+
+
+<!-- In terms of complexity and behavior, you can understand var, let, and const like this:
+
+var → Function-scoped. It can be redeclared and reassigned, which can make code harder to manage in large programs.
+let → Block-scoped. It can be reassigned but cannot be redeclared in the same scope, making it safer than var.
+const → Block-scoped. It cannot be reassigned or redeclared in the same scope, making it the most restrictive and predictable.
+
+So, in terms of control/restriction:
+
+var < let < const
+
+-->
