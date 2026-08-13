@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator & Conditional</title>
+</head>
+<body>
+    <script>
+        // let a=10;
+        // let b=100;
+        // let c=a+b;
+        
+        // alert(a+'+'+b+'='+c);
+        
+        // if (a<b){
+        //     document.write(a+'<'+b+'='+ (a<b)+'<br>');
+        // }
+        // if (!(a>b)){
+        //     document.write((a<b)+'<br>');
+        // }
+
+        // if (c==110){
+        //     document.write('c'+'='+c)
+        // }
+
+        let n=prompt('Enter a number: ');
+
+        let temp=n;
+        // Armstrong No.
+        let sum=0;
+        let no_of_digits=0;
+        while (n>0){
+            let r=n%10;
+            no_of_digits+=1;
+            let q=Math.floor(n/10);
+            n=q;
+        }
+        n=temp;
+        while (n>0){
+            let r=n%10;
+            sum+=r**no_of_digits;
+            let q=Math.floor(n/10);
+            n=q;
+        }
+        document.write('Sum of cube of digits is: '+sum+'<br>');
+        if (sum==153){
+            document.write(temp+' is an Armstrong number');
+        }
+
+    </script>
+    
+</body>
+</html>
