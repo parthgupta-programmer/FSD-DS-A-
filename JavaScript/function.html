@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function Hello(){
+    //         document.write("Hello!");
+    //     }
+    //     Hello();
+    //     Hello();
+
+    //     function add(a,b){
+    //         return a+b;
+    //     }
+    //     function multiply(a,b){
+    //         return add(a,b)*b;
+    //     }
+
+    // //  Arrow Function
+
+    //     const Hello2 = () => 'Hello !';
+    //     const add2 = (a,b) => a+b;
+
+    //     document.write(add2(5,7));
+        
+    //     document.write(Hello2());
+    //     document.write(multiply(5,7));
+
+
+        input=prompt('Enter the no. 1.CAR, 2.AEROPLANE, 3.HELICOPTER: ');
+        const car = () => {
+            const cars=[['Lamborghini','3 Crores','4 Seats']];
+            for(let i=0;i<=cars.length-1;i++){
+                document.write('Car Name:'+cars[i][0]+'<br>'+'Car Price'+cars[i][1]+'No. of Seats:'+cars[i][2]);
+            }
+        }
+        const aeroplane = () => {
+            const aero=[['A1','60 Crores','250 Seats']]
+            for(let i=0;i<=aero.length-1;i++){
+                document.write('Aeroplane Name:'+aero[i][0]+'<br>'+'Aeroplane Price:'+aero[i][1]+'<br>'+'No. of Seats:'+aero[i][2]);
+            }
+        }
+        const helicopter = () => {
+            const heli=[['H1','12 Crores','2 Seats']]
+            for(let i=0;i<=heli.length-1;i++){
+                document.write('Helicopter Name:'+heli[i][0]+'<br>'+'Helicopter Price:'+heli[i][1]+'No. of Seats:'+heli[i][2]);
+            }
+        }
+        if (input==1){
+            document.write(car());
+        }
+        else if(input == 2){
+            document.write(aeroplane());
+
+        }
+        else if(input == 3){
+            document.write(helicopter());
+        }
+        else{
+            document.write('Wrong input !! Try Again.')
+        }
+
+    </script>
+</body>
+</html>
