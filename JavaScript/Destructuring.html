@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        const student={
+            Name:'Parth Gupta',
+            branch:'B.tech',
+            Fee:133500
+        }
+
+        document.write(student);
+        // Without Destructuring
+        document.write(student.Name)
+        document.write(student.Class)
+        document.write(student.Fee)
+
+        // With Destructuring
+        const {name,branch,fee}=student;
+        console.log(student);
+    </script>
+    
+</body>
+</html>
