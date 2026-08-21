@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+
+    const students = [
+        {
+            "name": "Parth",
+            "age": 20,
+            "marks": 95,
+            "branch": "B.Tech"
+        },
+        {
+            "name": "Madhav",
+            "age": 20,
+            "marks": 98,
+            "branch": "B.Tech"
+        },
+        {
+            "name": "Rahul",
+            "age": 23,
+            "marks": 91,
+            "branch": "MCA"
+        },
+        {
+            "name": "Aman",
+            "age": 17,
+            "marks": 98,
+            "branch": "1Oth"
+        },
+        {
+            "name": "Priya",
+            "age": 22,
+            "marks": 93,
+            "branch": "MCA"
+        }];
+        input=prompt('Enter the branch to filter: ');
+        const filtered_students = students.filter(student => student.branch == input);    
+        console.log(filtered_students)
+    </script>
+</body>
+</html>
