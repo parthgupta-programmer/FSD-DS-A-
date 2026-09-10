@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <style>
+        table{
+            width:80%;
+            border: 1px solid black;
+            margin: auto;
+            padding: 10px;
+            color:rgb(5, 9, 76);
+            font-size:medium;
+            height:60%;
+        
+        }
+        h1{
+            color:blueviolet;
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Shop</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Serial NO.</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+            <td>
+
+            </td>
+        </tbody>
+    </table>
+    <script>
+        const element=document.getElementById("data");
+        const url='https://dummyjson.com/products';
+        async function fetchData(){
+            try{
+                const response=await fetch(url);
+                const data=await response.json();
+                console.log(data);
+                let row='';
+                data.products.map((i,index)=>{
+                    row+=`<tr>
+                        <td>${index+1}</td>
+                        <td>${i.title}</td>
+                        <td><img src="${i.images[0]}" width="100px" height="100px"></td>
+                        <td>${i.category}</td>
+                        <td>${i.price}</td>
+                    </tr>`;
+                })
+                element.innerHTML=row;
+            }
+            catch(err){
+                console.log('Error: ',err);
+            }
+
+
+        }
+        fetchData();
+
+    </script>
+</body>
+</html>
