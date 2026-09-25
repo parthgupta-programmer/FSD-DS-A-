@@ -1,13 +1,10 @@
 import React from 'react'
-import Counter from './components/counter'
+import Image_Resizer from './components/Image_Resizer'
 
 const App = () => {
   return (
     <div>
-      <>
-      <Counter />
-      </>
-      
+      <Image_Resizer />
     </div>
   )
 }
